@@ -15,8 +15,7 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
+const patern = images.map(({url,alt}) =>`<li><img width='300px' src='${url}' alt='${alt}'><li>`).join('');
 
-
-images.forEach(({url,alt}) => {
-const patern = `<li><img src='${url}' alt='${alt}'><li>`;
-gallery.insertAdjacentHTML('beforeend',patern)});
+console.log(patern)
+gallery.insertAdjacentHTML('beforeend',patern);
