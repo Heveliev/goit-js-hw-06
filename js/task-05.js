@@ -1,3 +1,8 @@
 const inputHtml = document.querySelector('#name-input');
-inputHtml.addEventListener('input', (event)=>{document.querySelector('#name-output').textContent = event.currentTarget.value})
+const spanHtml = document.querySelector('#name-output');
+
+inputHtml.addEventListener('input', 
+(event)=>{
+    if(!inputHtml.value){spanHtml.textContent = 'Anonymous'}
+    else{spanHtml.textContent = event.currentTarget.value}})
 

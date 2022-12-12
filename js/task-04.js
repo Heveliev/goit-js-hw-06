@@ -1,15 +1,15 @@
 let counterValue = 0;
 
-// counterValue = spanHtml;
 
+const spanHtml =  document.querySelector('#value');
 const btnMinus = document.querySelector('#counter').firstElementChild;
 const btnPlus = document.querySelector('#counter').lastElementChild;
 
 
 btnMinus.addEventListener('click',(evnt)=>{ 
    counterValue -= 1
-   document.querySelector('#value').textContent = counterValue;})
+  spanHtml.textContent = counterValue;})
 btnPlus.addEventListener('click',()=>{ 
    counterValue +=1
-   document.querySelector('#value').textContent =  counterValue;})
+   spanHtml.textContent =  counterValue;})
 
